@@ -7,6 +7,7 @@ import { commandExplore } from "./commandExplore.js";
 import { commandCatch } from "./commandCatch.js";
 import { commandInspect } from "./commandInspect.js";
 import { commandPokedex } from "./pokedex.js";
+import { commandBattle } from "./commandBattle.js";
 
 export function getCommands(): Record<string, CLICommand> {
   return {
@@ -62,6 +63,13 @@ export function getCommands(): Record<string, CLICommand> {
       description: "Prints all the pokemon's name catched in your pokedex",
       callback: async (state: State) => {
         commandPokedex(state);
+      },
+    },
+    battle: {
+      name: "battle",
+      description: "Battle two Pokemon",
+      callback: async (state: State, pokemon1: string, pokemon2: string) => {
+        commandBattle(state, pokemon1, pokemon2);
       },
     },
   };
