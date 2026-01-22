@@ -56,9 +56,9 @@ export async function commandBattle(
           console.log(`${pokemon1} has ${pokemon1Hp} HP left.`);
         }
       }
+      turn = 0;
     }
   }
-  turn = 0;
 }
 
 async function getPokemonStatUrl(

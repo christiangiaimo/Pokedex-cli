@@ -1,5 +1,4 @@
 import { State } from "./state";
-import { NameUrl, PokeAPI } from "./pokeapi";
 
 export async function commandCatch(
   state: State,
