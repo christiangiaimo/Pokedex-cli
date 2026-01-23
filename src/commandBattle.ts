@@ -57,6 +57,7 @@ export async function commandBattle(
         }
       }
       turn = 0;
+      2;
     }
   }
 }
